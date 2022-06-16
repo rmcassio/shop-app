@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:shop_app/models/cart.dart';
 import 'package:shop_app/models/order_list.dart';
 import 'package:shop_app/models/product_list.dart';
+import 'package:shop_app/pages/auth_page.dart';
 import 'package:shop_app/pages/cart_page.dart';
 import 'package:shop_app/pages/product_detail_page.dart';
 import 'package:shop_app/pages/product_form_page.dart';
@@ -35,10 +36,10 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Sports House',
         theme: ThemeData(
-          primarySwatch: Colors.purple,
-          accentColor: Colors.deepOrange,
+          primarySwatch: Colors.blueGrey,
+          accentColor: Colors.lightGreen,
           fontFamily: 'Lato',
         ),
         // home: ProductsOveviewPage(),
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
           AppRoutes.ORDERS: (ctx) => OrdersPage(),
           AppRoutes.PRODUCTS: (ctx) => ProductsPage(),
           AppRoutes.PRODUCT_FORM: (ctx) => ProductFormPage(),
+          AppRoutes.AUTH: (ctx) => AuthPage(),
         },
         debugShowCheckedModeBanner: false,
       ),
