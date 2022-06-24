@@ -14,7 +14,7 @@ class AuthPage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
                   Color.fromRGBO(215, 117, 255, 0.5),
@@ -25,7 +25,7 @@ class AuthPage extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             width: double.infinity,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -37,13 +37,13 @@ class AuthPage extends StatelessWidget {
                   ),
                   padding: const EdgeInsets.symmetric(
                     vertical: 10,
-                    horizontal: 70,
+                    horizontal: 50,
                   ),
                   transform: Matrix4.rotationZ(-8 * pi / 180)..translate(-10.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.deepOrange.shade900,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 8,
                         color: Colors.black26,
@@ -51,16 +51,16 @@ class AuthPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Text(
-                    'Minha Loja',
+                  child: const Text(
+                    'Sports House',
                     style: TextStyle(
                       fontSize: 45,
                       fontFamily: 'Anton',
-                      color: Theme.of(context).accentTextTheme.headline6?.color,
+                      color: Colors.white70,
                     ),
                   ),
                 ),
-                AuthForm(),
+                const AuthForm(),
               ],
             ),
           ),

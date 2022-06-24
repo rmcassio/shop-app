@@ -13,14 +13,14 @@ class OrdersPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Meus Pedidos'),
       ),
-      drawer: AppDrawer(),
+      drawer: const AppDrawer(),
       body: FutureBuilder(
         future: Provider.of<OrderList>(context, listen: false).loadOrders(),
         builder: (ctx, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (snapshot.error != null) {
-            return Center(
+            return const Center(
               child: Text('Ocorreu um erro'),
             );
           } else {

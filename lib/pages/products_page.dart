@@ -28,7 +28,7 @@ class ProductsPage extends StatelessWidget {
                 AppRoutes.PRODUCT_FORM,
               );
             },
-            icon: Icon(Icons.add),
+            icon: const Icon(Icons.add),
           ),
         ],
       ),
