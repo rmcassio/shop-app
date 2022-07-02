@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+// import 'package:flutter/src/foundation/key.dart';
+// import 'package:flutter/src/widgets/framework.dart';
 import 'package:shop_app/components/auth_form.dart';
 
 class AuthPage extends StatelessWidget {
@@ -56,7 +56,7 @@ class AuthPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 45,
                       fontFamily: 'Anton',
-                      color: Colors.white70,
+                      color: Colors.white,
                     ),
                   ),
                 ),

@@ -11,7 +11,7 @@ class OrdersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Meus Pedidos'),
+        title: const Text('Meus Pedidos'),
       ),
       drawer: const AppDrawer(),
       body: FutureBuilder(
