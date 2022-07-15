@@ -5,12 +5,10 @@ import 'package:shop_app/models/cart.dart';
 import 'package:shop_app/models/order_list.dart';
 import 'package:shop_app/models/product_list.dart';
 import 'package:shop_app/pages/auth_or_home_page.dart';
-import 'package:shop_app/pages/auth_page.dart';
 import 'package:shop_app/pages/cart_page.dart';
 import 'package:shop_app/pages/product_detail_page.dart';
 import 'package:shop_app/pages/product_form_page.dart';
 import 'package:shop_app/pages/products_page.dart';
-import 'package:shop_app/pages/products_overview_page.dart';
 import 'package:shop_app/utils/app_routes.dart';
 
 import 'pages/orders_page.dart';
