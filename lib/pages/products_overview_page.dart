@@ -42,7 +42,7 @@ class _ProductsOveviewPageState extends State<ProductsOveviewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sports House'),
+        title: const Text('Sports House'),
         actions: [
           PopupMenuButton(
             icon: const Icon(Icons.more_vert),
