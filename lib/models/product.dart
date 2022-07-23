@@ -32,7 +32,7 @@ class Product with ChangeNotifier {
       _toggleFavorite();
       final response = await http.put(
         Uri.parse(
-          '${Constants.USER_FAVORITE_URL}/$userId/$id.json?auth=$token',
+          '${Constants.USER_FAVORITES_URL}/$userId/$id.json?auth=$token',
         ),
         body: jsonEncode(isFavorite),
       );

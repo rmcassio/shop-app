@@ -29,19 +29,21 @@ class MyApp extends StatelessWidget {
           create: (_) => Auth(),
         ),
         ChangeNotifierProxyProvider<Auth, ProductList>(
-          create: (_) => ProductList('', []),
+          create: (_) => ProductList(),
           update: (context, auth, previous) {
             return ProductList(
               auth.token ?? '',
+              auth.userId ?? '',
               previous?.items ?? [],
             );
           },
         ),
         ChangeNotifierProxyProvider<Auth, OrderList>(
-          create: (_) => OrderList('', []),
+          create: (_) => OrderList(),
           update: (context, auth, previous) {
             return OrderList(
               auth.token ?? '',
+              auth.userId ?? '',
               previous?.items ?? [],
             );
           },
@@ -53,8 +55,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Sports House',
         theme: ThemeData(
-          primarySwatch: Colors.blueGrey,
-          accentColor: Colors.lightGreen,
+          primarySwatch: Colors.teal,
+          accentColor: Colors.orangeAccent,
           fontFamily: 'Lato',
         ),
         // home: ProductsOveviewPage(),
