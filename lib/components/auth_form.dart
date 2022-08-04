@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:shop_app/exceptions/auth_excepetion.dart';
 import 'package:shop_app/models/auth.dart';
 
-enum AuthMode { Signup, Login }
+enum AuthMode { signup, login }
 
 class AuthForm extends StatefulWidget {
   const AuthForm({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class _AuthFormState extends State<AuthForm> with SingleTickerProviderStateMixin
   final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   bool _isLoading = false;
-  AuthMode _authMode = AuthMode.Login;
+  AuthMode _authMode = AuthMode.login;
   final Map<String, String> _authData = {
     'email': '',
     'password': '',
@@ -46,16 +46,16 @@ class _AuthFormState extends State<AuthForm> with SingleTickerProviderStateMixin
     super.dispose();
   }
 
-  bool _isLogin() => _authMode == AuthMode.Login;
-  bool _isSignup() => _authMode == AuthMode.Signup;
+  bool _isLogin() => _authMode == AuthMode.login;
+  bool _isSignup() => _authMode == AuthMode.signup;
 
   void _switchAuthMode() {
     setState(() {
       if (_isLogin()) {
-        _authMode = AuthMode.Signup;
+        _authMode = AuthMode.signup;
         _controller?.forward();
       } else {
-        _authMode = AuthMode.Login;
+        _authMode = AuthMode.login;
         _controller?.reverse();
       }
     });
@@ -180,7 +180,7 @@ class _AuthFormState extends State<AuthForm> with SingleTickerProviderStateMixin
                     ),
                   ),
                   child: Text(
-                    _authMode == AuthMode.Login ? 'Entrar' : 'Registrar',
+                    _authMode == AuthMode.login ? 'Entrar' : 'Registrar',
                   ),
                 ),
               const Spacer(),
