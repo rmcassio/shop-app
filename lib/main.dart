@@ -10,6 +10,7 @@ import 'package:shop_app/pages/product_detail_page.dart';
 import 'package:shop_app/pages/product_form_page.dart';
 import 'package:shop_app/pages/products_page.dart';
 import 'package:shop_app/utils/app_routes.dart';
+import 'package:shop_app/utils/custom_route.dart';
 
 import 'pages/orders_page.dart';
 
@@ -58,6 +59,12 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.teal,
           accentColor: Colors.orangeAccent,
           fontFamily: 'Lato',
+          pageTransitionsTheme: PageTransitionsTheme(
+            builders: {
+              TargetPlatform.iOS: CustomPageTransitionsBuilder(),
+              TargetPlatform.android: CustomPageTransitionsBuilder(),
+            },
+          ),
         ),
         // home: ProductsOveviewPage(),
         routes: {
